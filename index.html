@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Conflux</title>
+    <style>
+        @font-face {
+            font-family: 'Finlandica';
+            src: url('Finlandica-BoldItalic.ttf') format('truetype');
+        }
+
+        body,
+        canvas {
+            font-family: 'Finlandica';
+        }
+
+        body {
+            text-align: center;
+        }
+
+        canvas {
+            display: block;
+            background: #bde0fe;
+            /* Light blue sky */
+            margin: 20px auto;
+            border: 1px solid black;
+        }
+
+        .slider {
+            width: 300px;
+        }
+
+        canvas {
+            width: 100%;
+            max-width: 800px;
+            /* or preferred max width */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            background: #bde0fe;
+            /* Light blue sky */
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Color Conflux</h1>
+    <label for="speedControl">Adjust Drop Speed:</label>
+    <input type="range" id="speedControl" class="slider" min="0.5" max="3" step="0.1" value="1">
+    <p>Time Remaining: <span id="timeDisplay">120</span> seconds</p>
+    <canvas id="gameCanvas"></canvas>
+    <script src="game.js"></script>
+</body>
+
+</html>
